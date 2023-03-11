@@ -1,0 +1,59 @@
+1) write a psedocode to accept 3 subjects marks and find total and average marks
+
+numeric sub1,sub2,sub3,total,Avg
+print("enter the sub1,sub2,sub3 marks")
+input sub1
+input sub2
+input sub3
+total=sub1+sub2+sub3
+Avg=total/3
+print(total)
+print(Avg)
+end
+
+2) write a psedocode to accept employee salary and 3 shopping billes and find total shopping amount and % of amount employee is spending on shopping on his/her salary 
+
+begin
+numeric employee salary, 3 shopping bill
+print("enter the employee salary")
+input employee salary
+print("enter the 3 shopping bill")
+input 3 shopping bill
+total=shopping bill1 + bill2 + bill3
+percentage= (shopping bill *100)/ employee salary
+print(total)
+print(percentage)
+end
+
+
+3)  write a psedocode to accept basic salary and find gross salary
+Gs= basic + Hra + da
+Hra is 56% on basic and Da is 78% on basic
+
+begin
+numeric basic salary,gross, Hra, da
+print("enter the basic salary");
+input basic salary
+
+if(basic <= 10000)
+{
+hra = 0.67 * basic
+da  = 0.78 * basic
+gross = basic + hra + da
+print("The gross salary is", gross);
+}
+else if (basic salary = 20000)
+{
+hra = 0.69 * basic
+da = 0.79 * basic
+gross = basic + hra + da
+print(" The gross salary is:" gross);
+}
+else
+{
+hra = 0.75 * basic
+da =  0.85 * basic
+gross = basic + hra + da
+print("The gross salary is:", gross);
+}
+end
