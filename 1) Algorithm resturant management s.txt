@@ -1,0 +1,39 @@
+1) Algorithm resturant management system:
+
+step 1: Start
+step 2: receive the menu
+step 3: search for the good food and cost
+step 4: cost min 100
+step 5: order
+step 6: receive another menu
+step 7: cost>100
+step 8: order
+step 9: stop
+
+2) Order management algorithm:
+
+step 1: Accept the customer login
+step 2: customer wants to see food menu
+step 3: Then customer orders the food
+step 4: The ordered food taken away from the kitchen
+
+3)Kitchen management algorithm:
+
+step 1: start
+step 2: Accept the order from the customer
+step 3: After accepting the order
+step 4: see for ordered ingridents to make food
+step 5: if items are available or not
+step 6: item is available
+step 7: start to prepare
+step 8: After making food give it to the customer from kitchen
+step 9: stop
+
+4) Employee management system:
+
+step 1: start
+step 2: interview process
+step 3: if selected
+step 4: submitting the documents
+step 5: joining as employee
+step 6: stop
