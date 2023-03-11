@@ -1,0 +1,34 @@
+1) Pseducode to accept the given number is even and odd
+
+begin
+numeric num 
+print("enter the number")
+input num
+if(num%2==0)
+{
+print("num is even")
+}
+else
+{
+print("num is odd")
+}
+end
+
+
+2) Pseducode to accept the given age is Eligible for vorting
+
+begin
+numeric age
+print("enter the age")
+input age
+if(age>=18)
+{
+print("Eligible for vorting")
+}
+else
+{
+print("NotEligible for vorting")
+}
+end
+
+
