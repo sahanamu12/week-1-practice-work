@@ -1,0 +1,64 @@
+1) write psedocode for palindrome number
+
+Begin
+numeric n,rev=0,rem
+print("num")
+input num
+while(n!=0)
+{
+rem=n%10;
+reverse=rev*10+rem;
+n=n/10;
+}
+printf("Reversed number");
+if(rev=n)
+{
+printf{"palindrome"}
+else
+{
+print{"not palindrome"}
+}
+end
+
+
+2) write a psedocode for strong number
+
+begin
+numeric num,rev,rem
+print("enter the number")
+input num
+if (num!=0)
+{
+rem=num%10;
+rev=rev*10+rem;
+num=num/10;
+}
+print("reveresed no:",rev)
+end
+
+3) write a psedocode for arm strong number
+
+Begin 
+
+ 
+
+Numeric n=153,n1=n,n3=n,c=0:
+while(n!=0){
+n=n/10;
+c++;
+}
+Numeric rem=0,sum=0;
+while(n!=0){
+rem=n1%10;
+Numeric pow=1;
+for(int i=1;i<=c;i++){
+pow=pow*rem;}
+sum=sum+pow;
+n1=n1/10;
+}
+if(sum==n3){
+print("armstrong number")}
+else{
+print("not armStrong number)
+}
+end
