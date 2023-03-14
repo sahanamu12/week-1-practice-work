@@ -1,0 +1,208 @@
+While loop:
+
+
+1) WAP print 1-10 numbers
+
+begin
+numeric num=10
+while num<=10{
+print (num)
+num--
+}
+end
+
+
+2) WAP to accept start and stop values and print b/w values
+
+
+Begin
+    numeric start,stop
+    print("Enter your start and stop values")
+     input start, stop             //10 100
+ 
+    if(start < stop) {
+              
+              while(start<=stop) {
+                    print(start)
+                       start++
+                 }
+     }
+     else if(start>stop) {
+                   while(start>=stop) {
+                          print(start)
+                              start--
+                      }
+      }
+else  {
+          print("Your start and stop values are same");
+    }
+
+
+
+3) WAP to print factors of a given number 
+Enter number to find factors: 10
+output: 1 2 5
+Enter number to find factors: 50
+output: 1 2 5 10 25
+
+Begin
+     Numeric num,i=1
+     print("Enter number to print factors")   //100
+     input num
+ 
+     while(i<=num/2)  {                 //3 <=50
+             if(num%i==0) {
+                         print(i)                  // 1  2
+                }
+          i++
+ 
+     }
+
+
+4) WAP to print number of factors of a given number
+Enter number to find number of factors: 10
+output: 3
+Enter number to find number of factors: 50
+output: 5
+
+
+begin
+number number, factor;
+ 
+print("Enter a number")
+input number
+ 
+while(factor < number)
+{
+if(number % factor == 0)
+{
+print(factor)
+}
+factor=factor+1
+}
+End
+
+
+5) WAP to check a given number is prime or not
+
+begin
+numeric num,i
+print("enter number to check")
+input num,i
+while(i<=num/2)
+{
+if(num%i==0)
+print("number is not prime");
+else
+print("number is prime");
+}
+end
+
+6) WAP to check given number is perfect number or not
+enter number to check it is perfect number or not : 6
+
+begin
+numeric num,,i=1,sum=0
+input num
+print("Enter number")
+while(i<=num/2){
+    if(num%i==0){
+    sum=sum+i}
+    i++
+    }
+if(sum=num){
+print("Given number is perfect number")
+}
+else{
+Print("Given number is not perfect number")
+}
+end
+
+7) write program to count how many digits in the given number?
+
+Begin
+Number number, perfect=0,count=1;
+ 
+print("Enter a number")
+Input number
+
+while(count < number/2)
+{
+if(number % count == 0)
+{
+ perfect=perfect+count
+}
+count=count+1
+}
+if perfect==number{
+print("perfect")
+}
+else{
+print("No")
+}
+End
+
+8) WAP to print even numbers between 1-n
+
+begin
+numeric n, i=1
+print("enter n value")
+input n
+do{
+if(i%2==0){
+print(i)
+}
+i++;
+}
+while(i<=n);
+end
+
+9)  WAP to print odd numbers between 1-n
+
+begin
+numeric n, i=1
+print("enter n value")
+input n
+do{
+if(i%2!=0){
+print(i)
+}
+i++;
+}
+while(i<=n);
+end
+
+10)  WAP to print sum of 1-n numbers
+
+begin
+numeric sum=0,n=0,i=1
+print("enter n value to find sum")
+input n
+do{
+sum=sum+i;
+i++
+}
+while(i<=n);
+print("sum of 1-n is", sum);
+end
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
