@@ -1,0 +1,425 @@
+1) Addition.java
+
+
+class Addition
+  {
+    public static void main(String args[]){
+    int a=5,b=5,sum=0,sub=0,mul=0,div=0;
+      sum=a+b;
+      sub=a-b;
+      mul=a*b;
+      div=a/b;
+      System.out.println("sum is:"+sum);
+      System.out.println("sub is:"+sub);
+      System.out.println("mul is:"+mul);
+      System.out.println("div is:"+div);
+    }
+  }
+
+
+2)Average.java
+
+
+class Average
+  {
+    public static void main(String args[])
+    {
+      int a=60;
+      int b=68;
+      int c=75;
+      int total,average;
+      total=a+b+c;
+      average=total/3;
+      System.out.println("The total of 3 subjects is :" +total);
+      System.out.println("The average of 3 subjects is :" +average);
+    }
+  }
+
+
+
+3)EvenOdd.java
+
+
+class EvnOdd
+{
+public static void main(String args[]) 
+{
+System.out.println("The Odd num are:");
+for (int i = 1; i <= 100; i++) 
+{
+if (i % 2 != 0)
+ {
+System.out.print(i + " ");
+}
+}
+}
+}
+
+
+4)For.java
+
+
+public class For
+{
+public static void main(String[] args){
+int i,j;
+for(i=0;i<=5;i++)
+{
+for(j=0;j<=i;j++)
+{
+System.out.print("*");
+}
+System.out.println("");
+}
+}
+}
+
+
+5)Bankthird.java
+
+
+ import java.util.Scanner;
+ public class Bankthird {
+    Scanner s=new Scanner(System.in);
+    int pincount=0;
+    double acbal=10000;
+  public void deposite() {
+    System.out.println("Enter deposite amount");
+    int amount=s.nextInt();
+    if(amount%100==0 ){
+      if(amount<=50000){
+        System.out.println("deposite  "+amount);
+         acbal=acbal+amount;
+         System.out.println("deposite bal : "+acbal);
+         
+        }
+        else{
+         System.out.println("Please enter the new amount");
+       }
+     }
+      
+    else {
+       System.out.println("enter the new amount mul of 100");
+      
+    }
+    }
+ public void Withdraw(){
+   System.out.println("Enter withdraw amount");
+   int amount=s.nextInt();
+   if(amount%100 == 0){
+     if(amount<=(acbal-500)){
+       if(amount<=20000){
+         System.out.println("Withdraw amount is "+amount);
+         acbal=acbal-amount;
+         System.out.println("available bal : "+acbal);
+       }
+       else{
+         System.out.println("Please enter amount less than 20000");
+       }
+     }
+     else{
+       System.out.println("less funds");
+     }
+   }else{
+     System.out.println("Enter multiples of 100's");
+   }
+ }
+  public void BalEnquiry(){
+    System.out.println("available bal : "+acbal);
+    
+  }
+   public void EXIT(){
+     System.out.println("EXIT");
+   }
+     public void viewOptions() {
+    
+    
+        System.out.println("======Welcome to canara Bank========");
+        int option=0;
+      
+        do{
+        System.out.println("1. Deposite");
+        System.out.println("2. Withdraw");
+        System.out.println("3. Bal Enquiry");
+        System.out.println("0. EXIT");
+        System.out.println("Choose your option");
+        option=s.nextInt();
+       
+        switch(option) {
+        case 1:{
+            deposite();
+            break;
+        }
+        case 2:{
+          Withdraw();
+          break;
+            
+        }
+       case 3:{
+         BalEnquiry();
+         break;
+         
+    
+       }
+       case 0:{
+         EXIT();
+         break;
+    }
+       default:
+       {
+           System.out.println("Invalid option");
+       }
+        }
+        }
+          while(option!=0);
+    }
+    public void validate() {
+        
+        System.out.println("Enter pin");
+        int pin=s.nextInt();
+        if(pin==1234) {
+            viewOptions();
+        }
+        else {
+          System.out.println("Invalid pin number, please try again");
+          pincount++;
+          if(pincount<3) {
+            validate();
+          }
+          else {
+            System.out.println("your card is blocked for the day.......");
+          }
+        }
+    }
+    public static void main(String[] args) {
+        Bankthird obj=new Bankthird();
+         obj.validate();
+ 
+    }
+}
+
+
+6)Hotel.java
+
+
+import java.util.Scanner;
+
+public class Hotel {
+    public static void main(String[] args) {
+        Scanner s= new Scanner(System.in);
+        System.out.println("Welcome to Hotel Paradise");
+        System.out.println("1. Vada- Rs. 20");
+        System.out.println("2. Chapathi - Rs. 25");
+        System.out.println("3. Upma - Rs. 30");
+        System.out.println("4. Pulao- Rs. 40");
+        System.out.println("5. Parota - Rs. 50");
+        System.out.println("6. Masala Dosa - Rs. 60");
+        System.out.println("7. Tomato Rice - Rs. 40");
+        System.out.println("Enter the item number:");
+        int item = s.nextInt();
+        System.out.println("Enter the number of plates of item:");
+        int quantity = s.nextInt();
+        System.out.println("Enter the GST rate (%):");
+        double gst = s.nextDouble();
+        double cost = 0;
+        switch (item) {
+            case 1:
+                cost = 20;
+                break;
+            case 2:
+                 cost = 25;
+                break;
+            case 3:
+                cost = 30;
+                break;
+            case 4:
+                 cost = 40;
+                break;
+            case 5:
+                 cost = 50;
+                break;
+            case 6:
+                cost = 60;
+                break;
+            case 7:
+                 cost = 40;
+                break;
+            default:
+                System.out.println("Invalid item number!");
+                System.exit(0);
+        }
+        double totalCost = cost * quantity;
+        double cgst = (totalCost * gst) / 200;
+        double igst = (totalCost * gst) / 100;
+        System.out.println("bill:");
+        System.out.println("Item: " + item);
+        System.out.println("Quantity: " + quantity);
+        System.out.println("GST rate: " + gst + "%");
+        System.out.println("CGST: Rs. " + cgst);
+        System.out.println("IGST: Rs. " + igst);
+        System.out.println("Total cost: Rs. " + (totalCost + cgst + igst));
+    }
+}
+
+
+7)Max.java
+
+
+import java.util.*;
+public class Max{
+    public static void main(String args[]) 
+  {
+        Scanner input = new Scanner(System.in);
+        System.out.print("\n Enter Size of Array: ");
+        int n = input.nextInt();
+        int i;
+        int arr[] = new int[n]; 
+
+        for (i = 0; i < n; i++) 
+        { 
+            System.out.print("\n Enter: ");
+            arr[i] = input.nextInt();
+        }
+
+        int max_element = arr[0]; 
+
+        for (i = 0; i < n; i++) {
+            if (arr[i] > max_element) { 
+                max_element = arr[i];
+            }
+            }
+        System.out.println("\n Maximum Number: " + max_element);
+        
+    }
+}
+
+8)Month.java
+
+import java.util.Scanner;
+public class Month
+{
+public static void main(String [ ] args)
+{
+Scanner s=new Scanner(System.in);
+System.out.println("enter month number to get month name");
+int Month = s.nextInt();
+
+switch(Month)
+{
+case 1:
+      System.out.println("january");
+      break;
+case 2:
+      System.out.println("february");
+      break;
+case 3:
+      System.out.println("march");
+      break;
+case 4:
+      System.out.println("april");
+      break;
+case 5:
+      System.out.println("may");
+      break;
+case 6:
+      System.out.println("june");
+      break;
+case 7:
+      System.out.println("july");
+      break;
+case 8:
+      System.out.println("august");
+      break;
+case 9:
+      System.out.println("september");
+      break;
+case 10:
+      System.out.println("october");
+      break;
+case 11:
+      System.out.println("november");
+      break;
+case 12:
+      System.out.println("december");
+      break;
+    default:
+      System.out.println("you have entered invalid number");
+}
+}
+}
+
+
+9)Minimum.java
+
+import java.util.Scanner;
+   class Minimum {
+  public static void main(String args[]) {
+    Scanner s = new Scanner(System.in);
+    import.java.util.Scanner;
+
+
+    class Larger{
+    int n1, n2, n3, n4, n5;
+    System.out.println("Enter the value of numbers");
+    n1 = s.nextInt();
+    n2 = s.nextInt();
+    n3 = s.nextInt();
+    n4 = s.nextInt();
+    n5 = s.nextInt();
+    if (n1 > n2 && n1 > n3 && n1> < n4&& n1 > n5) {
+      System.out.println(n1 + "is Small number");
+    } else if (n2 < n3 && n2 < n4 && n2 < n5) {
+      System.out.println(n2 + "is Small number");
+    } else if (n3 > n4 && n3 > n5) {
+      System.out.println(n3 + "is Small number");
+    } else if (n4 > n5) {
+      System.out.println(n4 + "is Small number");
+    }
+    else {
+      System.out.println(n5 + "is Small number");
+    }
+  }
+}
+
+
+10)Prime.java
+
+
+import java.util.Scanner;
+class Prime1
+{
+  public static void main(String[] args)
+  {
+    int n,i,count=0;
+    Scanner s= new Scanner(System.in);
+     System.out.println("enter number to check");
+      n=s.nextInt();
+      while(i<n)
+      {
+       if(n%i == 0)
+       {
+       count++;
+       break;
+       }
+      }
+       if(count==0)
+        System.out.print("is  prime");
+       else
+       System.out.print("not prime");
+    }
+  }
+
+11)Bills.java
+
+public class Bills{
+  public static void main(String args[])
+  {
+    int basic_salary=20000,bill1=2000,bill2=3000,bill3=4000,total_bill=0 ,total_amount=0;
+    total_bill=bill1+bill2+bill3;
+    total_amount=basic_salary*total_bill/100;
+    System.out.println("Total Shopping amount:" + total_bill );
+     System.out.println("Total amount spent for shopping:" awf32+  total_amount );
+    }
+}
+
+
